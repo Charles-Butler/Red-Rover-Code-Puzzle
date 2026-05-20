@@ -1,9 +1,14 @@
-
+import argparse
 
 STRING= "id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
 STRING_INPUT=[]
 
+argparse.ArgumentParser.add_argument('d', '--desc', action='store_true', help='Sorts in Descending (Z-A) order Defaults to Asc (A-Z)')
+args= argparse.ArgumentParser.parse_args()
+desc= args.desc
+
 print(f"Given '({STRING})'")
+print(f"Sorting order = {'Descending (Z-A' if desc else 'Ascending (A-Z)'}")
 
 def transform_string(s):
     nestedLevel = 0

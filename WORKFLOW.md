@@ -3,7 +3,9 @@
 1. ~~Given Input return same list: strings & strings w/ nested props~~
 
 2. ~~Given Input return same strings in GraphQL / JSON prettier format~~
-3. Add Default view & Alphabetical return _Actually Ordering_ (modify list in place) 4. Extension -> Order by Ascending / Descending 5. Extension -> Given ANY custom input "..."
+3. Add Default view & Alphabetical return _Actually Ordering_ (modify list in place)
+4. Extension -> Order by Ascending / Descending
+5. Extension -> Given ANY custom input "..."
 
 ## MVP Build/Proposals
 
@@ -13,8 +15,9 @@
    In / Out reqs _FFast_
    ```
 2. python application
-   func() -> transform string to JSON format
-   func() -> list.sort()
+   set value of `orignalString`
+   func() -> transform string to JSON format `json.dumps()` functino
+   func() -> `list.sort()`
    return new list.
 
 ## Iteration 1

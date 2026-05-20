@@ -20,14 +20,17 @@ def transform_string(s):
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
-            elif char == '(':
+        elif char == '(':
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
-            elif char == ')':                
+        elif char == ')':                
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
-            else:
+        else:
                 currentProp += char
+
+    if currentProp.strip():
+        result.append((nestedLevel, currentProp.strip()))
 
     return result
 

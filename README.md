@@ -5,6 +5,7 @@
 1. Open New terminal
 2. Navigate (cd) to `/Red-Rover-Code-Puzzle`
 3. run with `python rrStringTransformer.py`
+_Exact command may vary based on python installed eg. `python` could instead be `pip` `python3` `py`
 
 Expected Output:
 

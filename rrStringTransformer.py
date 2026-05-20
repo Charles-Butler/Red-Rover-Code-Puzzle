@@ -3,7 +3,7 @@
 STRING= "id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
 STRING_INPUT=[]
 
-print("Given " + STRING)
+print(f"Given '({STRING})'")
 
 def transform_string(s):
     nestedLevel = 0

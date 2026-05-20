@@ -57,22 +57,32 @@ def split_then_sort(usr_str):
 
     if current_item.strip():
         items.append(current_item.strip())
-        
-    items.sort()
+    
+    for i in range(len(items)):
+        item = items[i]
+        if '(' in item:
+            item_name = item[:item.index('(')]
+            nested_items = item[item.index('(')+1:item.rindex(')')]
 
+        #recursively sort inner/nested stuff
+            sorted_nested_item=split_then_sort(nested_items)
+            items[i] = f"{item_name}({sorted_nested_item})"
+
+    #Sort & Return lines
+    items.sort()
     return ", ".join(items)
 
 second_str=split_then_sort(STRING)
 # print(f"split & Sort: {split_then_sort(STRING)}")
 
 originalString=STRING
-print(f"\nTransformed String: \n")
+print(f"\nTransformed String:")
 
 for nestedLevel, data in transform_string(originalString):
     indent = "  " * nestedLevel
     print(f"{indent}- {data}")
     
-print(f"\nSorted Output\n")
+print(f"\nSorted Output:")
 #Second Output
 for nestedLevel, data in transform_string(second_str):
     indent = "  " * nestedLevel

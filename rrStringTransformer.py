@@ -23,6 +23,7 @@ def transform_string(s):
         elif char == '(':
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
+                nestedLevel += 1
                 currentProp = ''
         elif char == ')':
             if currentProp.strip():

@@ -62,12 +62,18 @@ def split_then_sort(usr_str):
 
     return ", ".join(items)
 
-print(f"split & Sort: {split_then_sort(STRING)}")
+second_str=split_then_sort(STRING)
+# print(f"split & Sort: {split_then_sort(STRING)}")
 
 originalString=STRING
-print("Transformed String:")
+print(f"\nTransformed String: \n")
 
 for nestedLevel, data in transform_string(originalString):
     indent = "  " * nestedLevel
     print(f"{indent}- {data}")
     
+print(f"\nSorted Output\n")
+#Second Output
+for nestedLevel, data in transform_string(second_str):
+    indent = "  " * nestedLevel
+    print(f"{indent}- {data}")

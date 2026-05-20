@@ -8,12 +8,6 @@ def transform_string(s):
     result = []
     currentProp = ""
 
-# Bash Equivalent
-# 1. | tr ',' '\n' -> take care of commas
-# 2a. | tr ')' ' '  
-# 2b. | tr '(' '\n\t' -> take care of ()
-# 3a. | sed 's/^ *//'  
-# 3b. | sed 's/^/- /' -> indention / dash and space
 
     for char in s:
         if char == ',':
@@ -42,5 +36,5 @@ originalString=STRING
 print("Transformed String:")
 
 for nestedLevel, data in transform_string(originalString):
-    indent = " " * nestedLevel
+    indent = "  " * nestedLevel
     print(f"{indent}- {data}")

@@ -1,6 +1,7 @@
 ## Breakdown of ask
 
-1. Given Input return same list: strings & strings w/ nested props
+~~1. Given Input return same list: strings & strings w/ nested props~~
+
 2. Given Input return same strings in GraphQL / JSON prettier format
 3. Add Default view & Alphabetical return _Actually Ordering_ (modify list in place)
 4. Extension -> Order by Ascending / Descending

@@ -10,6 +10,10 @@ USAGE="Usage: command -ihv args"
 
 # --- Body --------------------------------------------------------
 #  SCRIPT LOGIC GOES HERE
-echo "(id, name, email, type(id, name, customFields(c1, c2, c3)), externalId)"
+
+STRING="id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
+echo Given: $STRING 
+echo 'return formatted version like JSON'
+printf "$STRING" | tr ',' '\n' | sed 's/^ *//'
 # -----------------------------------------------------------------
 # Shell script Common template from https://stackoverflow.com/questions/14008125/shell-script-common-template

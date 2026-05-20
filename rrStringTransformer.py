@@ -1,6 +1,8 @@
 
 
 STRING= "id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
+STRING_INPUT=[]
+
 print("Given " + STRING)
 
 def transform_string(s):
@@ -32,6 +34,30 @@ def transform_string(s):
 
     return result
 
+def split_then_sort(usr_str):
+    items = []
+    current_item = ""
+    n_level = 0
+
+    for char in s:
+        if char == ',':
+            if currentProp.strip():
+                result.append((nestedLevel, currentProp.strip()))
+                currentProp = ''
+        elif char == '(':
+            if currentProp.strip():
+                result.append((nestedLevel, currentProp.strip()))
+                nestedLevel += 1
+                currentProp = ''
+        elif char == ')':
+            if currentProp.strip():
+                result.append((nestedLevel, currentProp.strip()))
+                nestedLevel -= 1
+                currentProp = ''
+        else:
+                currentProp += char
+                
+                    
 originalString=STRING
 print("Transformed String:")
 

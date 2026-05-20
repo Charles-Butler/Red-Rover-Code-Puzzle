@@ -39,28 +39,32 @@ def split_then_sort(usr_str):
     current_item = ""
     n_level = 0
 
-    for char in s:
-        if char == ',':
-            if currentProp.strip():
-                result.append((nestedLevel, currentProp.strip()))
-                currentProp = ''
-        elif char == '(':
-            if currentProp.strip():
-                result.append((nestedLevel, currentProp.strip()))
-                nestedLevel += 1
-                currentProp = ''
+    for char in usr_str:
+        if char == '(':
+                n_level += 1
+                current_item += char
         elif char == ')':
-            if currentProp.strip():
-                result.append((nestedLevel, currentProp.strip()))
-                nestedLevel -= 1
-                currentProp = ''
+
+                n_level -= 1
+                current_item += char
+
+        elif char == ',':
+                items.append((current_item.strip()))
+
+                current_item = ''
         else:
-                currentProp += char
-                
-                    
+                current_item += char
+
+    items.sort()
+
+    return ", ".join(items)
+
+print(f"split & Sort: {split_then_sort(STRING)}")
+
 originalString=STRING
 print("Transformed String:")
 
 for nestedLevel, data in transform_string(originalString):
     indent = "  " * nestedLevel
     print(f"{indent}- {data}")
+    

@@ -55,6 +55,9 @@ def split_then_sort(usr_str):
         else:
                 current_item += char
 
+    if current_item.strip():
+        items.append(current_item.strip())
+        
     items.sort()
 
     return ", ".join(items)

@@ -1,7 +1,7 @@
 
 
-STRING="id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
-print("Given" + STRING)
+STRING= "id, name, email, type(id, name, customFields(c1, c2, c3)), externalId"
+print("Given " + STRING)
 
 def transform_string(s):
     nestedLevel = 0
@@ -9,8 +9,25 @@ def transform_string(s):
     currentProp = ""
 
 # Bash Equivalent
-# printf "$STRING" | tr ',' '\n' | tr ')' ' ' | tr '(' '\n\t' | sed 's/^ *//' | sed 's/^/- /'
+# 1. | tr ',' '\n' -> take care of commas
+# 2a. | tr ')' ' '  
+# 2b. | tr '(' '\n\t' -> take care of ()
+# 3a. | sed 's/^ *//'  
+# 3b. | sed 's/^/- /' -> indention / dash and space
 
+    for char in s:
+        if char == ',':
+            if currentProp.strip():
+                result.append((nestedLevel, currentProp.strip()))
+                currentProp = ''
+            elif char == '(':
+                result.append((nestedLevel, currentProp.strip()))
+                currentProp = ''
+            elif char == ')':                
+                result.append((nestedLevel, currentProp.strip()))
+                currentProp = ''
+            else:
+                currentProp += char
 
     return result
 

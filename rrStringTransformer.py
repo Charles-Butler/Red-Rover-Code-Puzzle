@@ -15,19 +15,19 @@ def transform_string(s):
         if char == ',':
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
-                currentProp = ''
+            currentProp = ''
         elif char == '(':
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
-                nestedLevel += 1
-                currentProp = ''
+            nestedLevel += 1
+            currentProp = ''
         elif char == ')':
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
-                nestedLevel -= 1
-                currentProp = ''
+            nestedLevel -= 1
+            currentProp = ''
         else:
-                currentProp += char
+            currentProp += char
 
     if currentProp.strip():
         result.append((nestedLevel, currentProp.strip()))
@@ -41,19 +41,16 @@ def split_then_sort(usr_str):
 
     for char in usr_str:
         if char == '(':
-                n_level += 1
-                current_item += char
+            n_level += 1
+            current_item += char
         elif char == ')':
-
-                n_level -= 1
-                current_item += char
-
+            n_level -= 1
+            current_item += char
         elif char == ',' and n_level == 0:
-                items.append((current_item.strip()))
-
-                current_item = ''
+            items.append((current_item.strip()))
+            current_item = ''
         else:
-                current_item += char
+            current_item += char
 
     if current_item.strip():
         items.append(current_item.strip())

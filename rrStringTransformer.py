@@ -28,6 +28,7 @@ def transform_string(s):
         elif char == ')':
             if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
+                nestedLevel -= 1
                 currentProp = ''
         else:
                 currentProp += char
@@ -42,4 +43,4 @@ print("Transformed String:")
 
 for nestedLevel, data in transform_string(originalString):
     indent = " " * nestedLevel
-    print(f"- {indent}{data}")
+    print(f"{indent}- {data}")

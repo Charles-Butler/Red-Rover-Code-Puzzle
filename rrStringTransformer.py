@@ -21,9 +21,11 @@ def transform_string(s):
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
         elif char == '(':
+            if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
-        elif char == ')':                
+        elif char == ')':
+            if currentProp.strip():
                 result.append((nestedLevel, currentProp.strip()))
                 currentProp = ''
         else:

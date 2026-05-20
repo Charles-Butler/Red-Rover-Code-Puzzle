@@ -16,9 +16,13 @@
    ```
 2. python application
    set value of `orignalString`
-   func() -> transform string to JSON format `json.dumps()` functino
-   func() -> `list.sort()`
+   func() -> transform string to JSON looing format ~~`json.dumps()`~~
+   Remove !required chars
+   throw into array
+   func() -> `list.sort()`: reorder array items
+   check for nested items and reorder
    return new list.
+   send new string list to original transform fun()
 
 ## Iteration 1
 

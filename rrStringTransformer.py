@@ -48,7 +48,7 @@ def split_then_sort(usr_str):
                 n_level -= 1
                 current_item += char
 
-        elif char == ',':
+        elif char == ',' and n_level == 0:
                 items.append((current_item.strip()))
 
                 current_item = ''

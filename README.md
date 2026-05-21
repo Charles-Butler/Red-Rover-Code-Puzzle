@@ -6,10 +6,11 @@
 
 ## Instructions for running submission:
 
-1. Open New terminal
-2. Navigate (cd) to `/Red-Rover-Code-Puzzle`
-3. run with `python rrStringTransformer.py` (for A-Z ordered sort)
-4. For reverse order run with `python rrStringTransformer.py -d` or `--desc` (for Z-A order)
+1. Pull/Clone Submission branch of repo
+2. Open New terminal
+3. Navigate (cd) to `/Red-Rover-Code-Puzzle`
+4. run with `python rrStringTransformer.py` (for A-Z ordered sort)
+5. For reverse order run with `python rrStringTransformer.py -d` or `--desc` (for Z-A order)
 
 ### Exact command may vary based on python installed eg. `python` could instead be `pip` `python3` `py`
 

@@ -13,6 +13,7 @@ Expected Output:
 
 ```
 Given '(id, name, email, type(id, name, customFields(c1, c2, c3)), externalId)'
+Sorting order = Ascending (A-Z)
 
 Transformed String:
 - id

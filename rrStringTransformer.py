@@ -68,7 +68,7 @@ def split_then_sort(usr_str, desc=False):
             nested_items = item[item.index('(')+1:item.rindex(')')]
 
         #recursively sort inner/nested stuff
-            sorted_nested_item=split_then_sort(nested_items)
+            sorted_nested_item=split_then_sort(nested_items, desc)
             items[i] = f"{item_name}({sorted_nested_item})"
 
     #Sort & Return lines

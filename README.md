@@ -1,8 +1,8 @@
-=======================================
+<hr>
 
 # Charles Submission @Charles-Butler
 
-=======================================
+<hr>
 
 ## Instructions for running submission:
 
@@ -46,7 +46,7 @@ Sorted Output (A-Z):
   - name
 ```
 
-==============================================================================
+<hr>
 
 # Red Rover Code Puzzle
 

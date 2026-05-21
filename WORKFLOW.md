@@ -5,7 +5,6 @@
 2. ~~Given Input return same strings in GraphQL / JSON prettier format~~
 3. Add Default view & Alphabetical return _Actually Ordering_ (modify list in place)
 4. Extension -> Order by Ascending / Descending
-5. Extension -> Given ANY custom input "..."
 
 ## MVP Build/Proposals
 
@@ -31,3 +30,5 @@
    `originalString = userInput.getOrElse(given_string)`
 
 ## Iteration 2
+
+- Arguments for A-Z vs Z-A order

@@ -4,7 +4,8 @@
 
 1. Open New terminal
 2. Navigate (cd) to `/Red-Rover-Code-Puzzle`
-3. run with `python rrStringTransformer.py`
+3. run with `python rrStringTransformer.py` (for A-Z ordered sort)
+4. For reverse order run with `python rrStringTransformer.py -d` or `--desc` (for Z-A order)
 
 ### Exact command may vary based on python installed eg. `python` could instead be `pip` `python3` `py`
 
@@ -26,7 +27,7 @@ Transformed String:
     - c3
 - externalId
 
-Sorted Output:
+Sorted Output (A-Z):
 - email
 - externalId
 - id
